@@ -1,4 +1,4 @@
-package com.bridgelabz.notificationservice.ServiceImpl;
+package com.bridgelabz.notificationservice.serviceImpl;
 
 import java.util.Properties;
 
@@ -15,11 +15,8 @@ import org.springframework.stereotype.Service;
 @Service
 public class NotificationServiceImpl {
 	public static void sendEmail(String toEmail, String subject, String body) {
-		//System.out.println("in service-------------");
 		String fromEmail = System.getenv("email");
-		System.out.println(fromEmail);
 		String password = System.getenv("password");
-		System.out.println(password);
 		Properties prop = new Properties();
 		prop.put("mail.smtp.auth", "true");
 		prop.put("mail.smtp.starttls.enable", "true");
